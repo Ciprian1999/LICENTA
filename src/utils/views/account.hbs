@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/script.js" defer></script>
+    <script src="/Account.js" defer></script>
+</head>
+
+<body>
+    {{>header this}}
+    <!--Account-page-->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="/images/PC.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Logare</span>
+                            <span onclick="register()">Înregistrare</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input id="loginEmail" type="email" placeholder="Email" name="email" required>
+                            <input id="loginPass" type="password" placeholder="Parolă" name="password" required>
+                            <div class="tineminte">
+                                <input id="check" class="checkbox" type="checkbox" name="rememberMe">
+                                <label class="check" for="check">Ține-mă minte</label>
+                            </div>
+                            <button type="submit" class="btn">Logare</button>
+                            <p id="loginMessage"></p>
+                            <a href="/forgot">Am uitat parola</a>
+                        </form>
+                        <form id="RegForm" action="/users/create" method="POST">
+                            <input type="text" placeholder="Nume" name="lastName" required>
+                            <input type="text" placeholder="Prenume" name="firstName" required>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <input id="regPass" type="password" placeholder="Parolă" name="password" required>
+                            <input id="regPassConfirm" type="password" placeholder="Confirmă parola" required>
+                            <button type="submit" class="btn">Înregistrare</button>
+                            <p id="regFormMessage"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>

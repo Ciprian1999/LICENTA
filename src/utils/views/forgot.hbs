@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <script src="Account.js" defer></script>
+</head>
+
+<body>
+    {{>header this}}
+    <!--Account-page-->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/PC.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <h3>Am uitat parola</h3>
+                        </div>
+                        <form id="newPassForm" action="/users/forgot" method="POST">
+                            <input type="email" placeholder="Email" name="email" required>
+                            <input id="newPass" type="password" placeholder="Crează parolă nouă" name="password"
+                                required>
+                            <input id="newPassConfirm" type="password" placeholder="Confirmă parola" required>
+                            <button type="submit" class="btn">Schimbă parola</button>
+                            <p id="newPassMessage"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-# LICENTA
+# CIPRI-Components

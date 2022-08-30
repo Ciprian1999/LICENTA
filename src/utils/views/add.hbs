@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <script src="pay.js" async></script>
+</head>
+
+<body>
+    {{>header this}}
+    <!--Adaugare produse in magazin-->
+    <div class="contact-page">
+        <div class="contact-in">
+            <div class="contact-form">
+                <h1>Adăugare produse</h1>
+                <div id="error"></div>
+                <form action="/product/add" method="POST">
+                    <h3 class="salvareprod">Nume:</h3>
+                    <input type="name" name="name" placeholder="Nume" class="contact-form-txt" required />
+                    <h3 class="salvareprod">Preț:</h3>
+                    <input type="number" name="price" placeholder="Preț" min="1" max="9999" class="contact-form-txt"
+                        step="any" required />
+                    <h3 class="salvareprod">Cantitate:</h3>
+                    <input type="number" name="quantity" placeholder="Cantitate" min="1" max="9999"
+                        class="contact-form-txt" required />
+                    <h3 class="salvareprod">Categorie:</h3>
+                    <select class="salvareee" name="category">
+                        <option>TELEFOANE</option>
+                        <option>LAPTOPURI</option>
+                        <option>TABLETE</option>
+                        <option>SISTEME-PC</option>
+                        <option>TV</option>
+                        <option>COMPONENTE-IT</option>
+                    </select>
+                    <h3 class="salvareprod">Producator:</h3>
+                    <select class="salvareee" name="manufacturer">
+                        <option>APPLE</option>
+                        <option>SAMSUNG</option>
+                        <option>LENOVO</option>
+                        <option>MYRIA</option>
+                        <option>SONY</option>
+                        <option>ADDATA</option>
+                        <option>SEGOTEP</option>
+                        <option>ASUS</option>
+                        <option>JABRA</option>
+                        <option>HP</option>
+                        <option>JBL</option>
+                        <option>JVC</option>
+                        <option>HAMA</option>
+                    </select>
+                    <h3 class="salvareprod">Descriere:</h3>
+                    <textarea name="description" placeholder="Descriere" class="contact-form-textarea" maxlength="2000"
+                        required></textarea>
+                    <button type="submit" class="btn btn-primary btn-purchase">Adaugă produsul</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>

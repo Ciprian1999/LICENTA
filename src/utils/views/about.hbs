@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    {{>header this}}
+    <div class="despre">
+        <div id="content-wrapper">
+            <div class="cipri" id="cip">CIPRI</div>
+            <div class="cipri" id="sto">STORE</div>
+        </div>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/despre_page.png" width="500px" height="500px">
+                </div>
+                <div class="col-2">
+                    <small>În ziua de astăzi totul se întâmplă cu o rapiditate foarte mare întrucât nimeni nu își
+                        dorește să piardă timpul astfel că soluția mea care vine in ajutorul oamenilor care nu își
+                        permit sa piardă mult timp cu cumpărăturile este o platformă de comerț. Platforma de comerț
+                        dezvoltata de mine oferă oamenilor posibilitatea de cumparare a unor produse din gama IT intr-un
+                        mod ușor, simplu și rapid.
+                        Obiectivul principal al magazinului online, îl reprezintă crarea unui mediu favorabil,
+                        interactiv și ușor de utilizat pentru clienți pentru a le satisface toate nevoile.Printr-o
+                        navigare simpla, clientul iși poate achiziționa unul sau mai multe produse dupa bunul plac doar
+                        printr-un click.Magazinul a fost creat folosind cateva framework-uri pe partea de frontend cum
+                        ar fi css si savascipt care au avut rolul de a stiliza magazinul si de a adăuga mai multe
+                        functionalități acestuia, iar pe partea de backend am folosit node.js pentru partea de server si
+                        mongoDB pentru stocarea datelor.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>

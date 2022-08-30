@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipri Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6d32d3357c.js" crossorigin="anonymous"></script>
+    <script src="/script.js" async></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!--Bara de navigatie -->
+            <div class="navbar">
+                <!--LOGO-->
+                <div data-highlightword="CIPRI">
+                    CIPRI STORE
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a id="nav" href="/">Acasă</a></li>
+                        <li><a id="nav" href="/products">Produse</a></li>
+                        <li><a id="nav" href="/about">Despre noi</a></li>
+                        <li><a id="nav" href="/contact">Contact</a></li>
+                        <li><a id="nav" href="/account">Contul meu</a></li>
+                    </ul>
+                </nav>
+                <a href="/cart">
+                    <img src="/images/cart.png" width="30px" height="30px"><span id="cartIcon" style="color:red"></span>
+                </a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <a href="/users/logout">
+                    <img class="logout" style="display:none" src="images/logout.png" width="30px" height="30px">
+                </a>
+                {{#if isLogged}}
+                <a href="/account">
+                    <img class="logout" src="/images/my-account.png" width="40px" height="40px">
+                </a>
+                {{/if}}
+                {{#if isAdmin}}
+                <a href="/add">
+                    <img class="logout" src="/images/admin.png" width="40px" height="40px">
+                </a>
+                {{/if}}
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Descoperă ofertele noi<br> la telefoane, tablete, calculatoare și accesorii din zona IT!</h1>
+                    <p>Detalii în regulamentul companiei.</p>
+                    <a href="/products" class="btn">Explorează acum</a>
+                </div>
+                <div class="col-2">
+                    <img src="/images/PC.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Categorii-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="/images/Categorie-1.png">
+                </div>
+                <div class="col-3">
+                    <img src="/images/Categorie-2.png">
+                </div>
+                <div class="col-3">
+                    <img src="/images/Categorie-3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Produse-->
+    <div class="small-container">
+        <h2 class="title">Produse promovate</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="/produse/Apple-iPhone-12-5G-Black_2">
+                    <img src="/images/Apple-iPhone-12-5G-Black_2/Apple-iPhone-12-5G-Black_2-poza main.png">
+                </a>
+                <h4>Apple-iPhone-12-5G-Black-128 GB</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>3172 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/Telefon-SAMSUNG-Galaxy-A52s-5G-256GB-8GB-RAM">
+                    <img
+                        src="/images/Telefon-SAMSUNG-Galaxy-A52s-5G-256GB-8GB-RAM/Telefon-SAMSUNG-Galaxy-A52s-5G-256GB-8GB-RAM-poza main.png">
+                </a>
+                <h4>Telefon-SAMSUNG-Galaxy-A52s-5G-256GB-8GB-RAM</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>1524 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/Laptop LENOVO IdeaPad-3-15IGL05-Abyss-Blue">
+                    <img
+                        src="images/Laptop LENOVO IdeaPad-3-15IGL05-Abyss-Blue/Laptop LENOVO IdeaPad-3-15IGL05-Abyss-Blue-poza main.png">
+                </a>
+                <h4>Laptop LENOVO IdeaPad-3-15IGL05-Abyss-Blue</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>999 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/Tableta-APPLE-iPad-9-2023-10.2-Wi-Fi-Space-Grey">
+                    <img
+                        src="/images/Tableta-APPLE-iPad-9-2023-10.2-Wi-Fi-Space-Grey/Tableta-APPLE-iPad-9-2023-10.2-Wi-Fi-Space-Grey-poza main.png">
+                </a>
+                <h4>Tableta-APPLE-iPad-9-2023-10.2-Wi-Fi-Space-Grey</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>1699 lei</p>
+            </div>
+        </div>
+        <h2 class="title">Ultimele produse</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="/produse/Televizor LED Smart SONY BRAVIA 85X85J Ultra HD 4K">
+                    <img
+                        src="/images/Televizor LED Smart SONY BRAVIA 85X85J Ultra HD 4K/Televizor LED Smart SONY BRAVIA 85X85J Ultra HD 4K-poza main.png">
+                </a>
+                <h4>Televizor LED Smart SONY BRAVIA 85X85J Ultra HD 4K</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>5949 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/Sistem Desktop PC MYRIA Vision V39 Powered by Asus">
+                    <img
+                        src="/images/Sistem Desktop PC MYRIA Vision V39 Powered by Asus/Sistem Desktop PC MYRIA Vision V39 Powered by Asus-poza main.png">
+                </a>
+                <h4>Sistem Desktop PC MYRIA Vision V39 Powered by Asus</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>3999 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/RT-AX86S_6">
+                    <img src="/images/RT-AX86S_6/RT-AX86S_6-poza main.png">
+                </a>
+                <h4>Router Wireless Gigabit ASUS RT-AX86S AX5700, Dual Band 861</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>764 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/Casti JABRA Elite 3, True Wireless, Bluetooth, In-Ear, Microfon, dark grey">
+                    <img
+                        src="/images/Casti JABRA Elite 3, True Wireless, Bluetooth, In-Ear, Microfon, dark grey/Casti JABRA Elite 3, True Wireless, Bluetooth, In-Ear, Microfon, dark grey-poza main.png">
+                </a>
+                <h4>Casti JABRA Elite 3, True Wireless, Bluetooth, In-Ear, Microfon</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>239 lei</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="/produse/PC_All_in_One_HP-21-b0000nq">
+                    <img src="/images/PC_All_in_One_HP-21-b0000nq/PC_All_in_One_HP-21-b0000nq-poza main.png">
+                </a>
+                <h4>Sistem PC All in One HP 21-b0004nq, Intel Pentium Silver</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>2899 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/DOCJBLFLIP5BLK_3_c1266bf1">
+                    <img src="/images/DOCJBLFLIP5BLK_3_c1266bf1/DOCJBLFLIP5BLK_3_c1266bf1-poza main.png">
+                </a>
+                <h4>Boxa portabila JBL Flip 5, Bluetooth, PartyBoost, Waterproof</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>449 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/CASHAS35BTBL_862e1abf">
+                    <img src="/images/CASHAS35BTBL_862e1abf/CASHAS35BTBL_862e1abf-poza main.png">
+                </a>
+                <h4>Casti JVC HA-S35BT-A-U, Bluetooth, On-Ear, Microfon</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>127 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/AIS173608_edab2ff1">
+                    <img src="/images/AIS173608_edab2ff1/AIS173608_edab2ff1-poza main.png">
+                </a>
+                <h4>Incarcator retea HAMA 173608, 2xUSB, negru</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>69 lei</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Oferte-->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="/images/Apple-produs.png" alt="" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusiv disponibil pe CIPRISTORE</p>
+                    <h1>Telefon APPLE iPhone 13 Pro Max</h1>
+                    <small>Ecran Super Retina XDR cu ProMotion pentru imagini fluide și reacții prompte. Upgrade
+                        substanțial al sistemului de camere pentru noi posibilități spectaculoase. Durabilitate
+                        excepțională. Cip ultra rapid A15 Bionic. Autonomie senzațională a bateriei. Pe scurt,
+                        Pro.</small>
+                    <br>
+                    <a href="/products" class="btn">Cumpără acum</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testimoniale-->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Unul dintre cele mai bune platforme de navigat. Shopping-ul a fost unul foarte relaxant întrucât
+                        platforma nu este încărcată iar căutarea produsului dorit este de asemenea ușoară. Făcând mai
+                        multe cumpărături ma ajutat mult evidența numărului de produse.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="/images/Criste Catalin.png">
+                    <h3>Criste Cătălin</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Recomand cu încredere acest magazin online, este foarte ușor de utilizat iar produsele le găsesc
+                        rapid fără problemă. Sortarea produselor ma ajutat mult in căutarea produsului dorit și metoda
+                        prin care se face plata este una rapidă și ușoară.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="/images/Marginean Cristian.png">
+                    <h3>Mărginean Crisitian</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Produsele sunt de încredere, la o calitate superioă, și la un preț foarte bun comparativ cu
+                        alte site-uri. Livrarea s-a făcut foarte repede, în câteva zile lucrătoare. Per total sunt
+                        foarte mulțumit de experiența avută cu acest magazin online.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="/images/Raul Suciu.png">
+                    <h3>Raul Suciu</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Brand-uri-->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="/images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="/images/logo-oppo.png">
+                </div>
+                <div class="col-5">
+                    <img src="/images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="/images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="/images/logo-philips.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>

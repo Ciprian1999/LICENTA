@@ -1,0 +1,40 @@
+<div class="container">
+    <!--Bara de navigatie -->
+    <div class="navbar">
+        <!--LOGO-->
+        <a href="/">
+            <div data-highlightword="CIPRI">
+                CIPRI STORE
+            </div>
+        </a>
+        <!--Navigatia-->
+        <nav>
+            <ul id="MenuItems">
+                <li><a id="nav" href="/">Acasă</a></li>
+                <li><a id="nav" href="/products">Produse</a></li>
+                <li><a id="nav" href="/about">Despre noi</a></li>
+                <li><a id="nav" href="/contact">Contact</a></li>
+                <li><a id="nav" href="/account">Contul meu</a></li>
+            </ul>
+        </nav>
+        <a href="/cart">
+            <img src="/images/cart.png" width="30px" height="30px"><span id="cartIcon" style="color:red"></span>
+        </a>
+        <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()">
+        {{#if isLogged}}
+        <a href="/users/logout">
+            <img class="logout" src="/images/logout.png" width="30px" height="30px">
+        </a>
+        {{/if}}
+        {{#if isLogged}}
+        <a href="/account">
+            <img class="logout" src="/images/my-account.png" width="40px" height="40px">
+        </a>
+        {{/if}}
+        {{#if isAdmin}}
+        <a href="/add">
+            <img class="logout" src="/images/admin.png" width="40px" height="40px">
+        </a>
+        {{/if}}
+    </div>
+</div>

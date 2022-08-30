@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single products Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/script.js" defer></script>
+    <script src="/Products-details.js" defer></script>
+</head>
+
+<body>
+    {{>header this}}
+
+    <!--Un singur produs(detalii)-->
+    <div class="small-container single-product">
+        {{!-- Adauga link cu filtrari aici --}}
+        <p>{{category}} / {{manufacturer}}</p>
+        <div class="row">
+            <div class="col-2">
+                <img src="/images/{{name}}/{{name}}-poza main.png" width="100%" id="ProductImg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="/images/{{name}}/{{name}}-poza main.png" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/images/{{name}}/{{name}}-poza mica 1.png" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/images/{{name}}/{{name}}-poza mica 2.png" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/images/{{name}}/{{name}}-poza mica 3.png" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h2 id="name" style="text-transform: uppercase;">{{name}}</h2>
+                <h4 id="price">{{price}} lei</h4>
+                <input id="quantity" type="number" value="1" min="1" max="10">
+                <button class="btn btn-primary shop-item-button" type="button" onclick="addToCartClicked()">Adaugă
+                    in
+                    cos</button>
+                <h3>Detalii produs <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Title-->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Produse recomandate</h2>
+            <p>Vedeți mai multe</p>
+        </div>
+    </div>
+
+    <!--Produse-->
+    <div class="small-container">
+
+
+        <div class="row">
+            <div class="col-4">
+                <a href="/produse/PC_All_in_One_HP-21-b0000nq">
+                    <img src="/images/PC_All_in_One_HP-21-b0000nq/PC_All_in_One_HP-21-b0000nq-poza main.png">
+                </a>
+                <h4>Sistem PC All in One HP 21-b0004nq, Intel Pentium Silver</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>2899 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/DOCJBLFLIP5BLK_3_c1266bf1">
+                    <img src="/images/DOCJBLFLIP5BLK_3_c1266bf1/DOCJBLFLIP5BLK_3_c1266bf1-poza main.png">
+                </a>
+                <h4>Boxa portabila JBL Flip 5, Bluetooth, PartyBoost, Waterproof</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>449 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/CASHAS35BTBL_862e1abf">
+                    <img src="/images/CASHAS35BTBL_862e1abf/CASHAS35BTBL_862e1abf-poza main.png">
+                </a>
+                <h4>Casti JVC HA-S35BT-A-U, Bluetooth, On-Ear, Microfon</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>127 lei</p>
+            </div>
+            <div class="col-4">
+                <a href="/produse/AIS173608_edab2ff1">
+                    <img src="/images/AIS173608_edab2ff1/AIS173608_edab2ff1-poza main.png">
+                </a>
+                <h4>Incarcator retea HAMA 173608, 2xUSB, negru</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>69 lei</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    {{>footer}}
+
+</body>
+
+</html>

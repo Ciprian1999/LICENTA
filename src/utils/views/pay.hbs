@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="pay.js" async></script>
+    <script src="script.js" async></script>
+    <script>
+        if (!localStorage.getItem('cart')) {
+            window.location.href = '/';
+        }
+    </script>
+</head>
+
+<body>
+    {{>header this}}
+    <!--Metoda de plata-->
+    <div class="containerpay">
+
+        <form id="payForm" action="/" method="GET">
+
+            <div class="rowpay">
+
+                <div class="colpay">
+
+                    <h3 class="titlepay1">ADRESA DE FACTURARE</h3>
+
+                    <div class="inputBox">
+                        <span>Numele întreg :</span>
+                        <input id="fullName" type="text" placeholder="Popescu Alex" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input id="email" type="email" placeholder="exemplu@yahoo.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Adresa :</span>
+                        <input id="address" type="text" placeholder="Nr. strada, Nr. apartament/casa" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Oraș :</span>
+                        <input id="city" type="text" placeholder="Cluj-Napoca" required>
+                    </div>
+
+                    <div class="flexpay">
+                        <div class="inputBox">
+                            <span>Județu :</span>
+                            <input id="county" type="text" placeholder="Cluj" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Cod poștal :</span>
+                            <input id="postalCode" type="text" placeholder="123 456" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="colpay">
+
+                    <h3 class="titlepay">PLATA</h3>
+
+                    <div class="inputBox">
+                        <span>Carduri acceptate :</span>
+                        <img src="images/card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>Numele cardului :</span>
+                        <input id="cardName" type="text" placeholder="dl. Popescu Alex" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Numărul cardului de credit :</span>
+                        <input id="cardNumber" type="number" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp luna :</span>
+                        <select id="expiryMonth" class="lunian">
+                            <option value="1">Ianuarie</option>
+                            <option value="2">Februarie</option>
+                            <option value="3">Martie</option>
+                            <option value="4">Aprile</option>
+                            <option value="5">Mai</option>
+                            <option value="6">Iunie</option>
+                            <option value="7">Iulie</option>
+                            <option value="8">August</option>
+                            <option value="9">Septembrie</option>
+                            <option value="10">Octombrie</option>
+                            <option value="11">Noiembrie</option>
+                            <option value="12">Decembrie</option>
+                            <!--   <input type="text" placeholder="ianuarie">  -->
+                        </select>
+
+                    </div>
+
+                    <div class="flexpay">
+                        <div class="inputBox">
+                            <span>Exp an :</span>
+                            <input id="expiryYear" type="number" placeholder="2022" min="2022" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input id="ccv" type="number" placeholder="123" max="999" required>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--  <input type="submit" value="proceed to checkout" class="submit-btn">  -->
+
+            <button class="btn btn-primary btn-purchase pay" type="submit">Finalizează cumpăraturile</button>
+        </form>
+
+    </div>
+    {{footer}}
+</body>
+
+</html>

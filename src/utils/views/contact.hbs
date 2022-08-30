@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cipri-Components | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <script src="pay.js" async></script>
+</head>
+
+<body>
+    {{>header this}}
+    <div class="contact-page">
+        <div class="contact-in">
+            <div class="contact-map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85977.62273608187!2d23.500826756466026!3d47.668867788245045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737dc70b4206f37%3A0x30914e534fa9d1dd!2sBaia%20Mare!5e0!3m2!1sen!2sro!4v1659975548064!5m2!1sen!2sro"
+                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="contact-form">
+                <h1>Contactați</h1>
+                <div id="error"></div>
+                <form onsubmit="alert('Mulțumim pentru mesaj, vă vom contacta in cel mai scurt timp!');">
+                    <input type="name" placeholder="Name" class="contact-form-txt" required />
+                    <input type="email" placeholder="Email" class="contact-form-txt" required />
+                    <textarea placeholder="Message" class="contact-form-textarea" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-purchase">Trimite</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script>document.getElementById('cartIcon').textContent = localStorage.getItem('cart') ? localStorage.getItem('cart').split(';').length : 0;</script>
+</body>
+
+</html>
