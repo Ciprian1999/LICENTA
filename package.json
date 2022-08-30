@@ -1,5 +1,5 @@
 {
-    "name": "pcjunkyard",
+    "name": "cipri-components",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:Ciprian1999/CIPRI-Components.git"
+        "url": "git@github.com:Ciprian1999/LICENTA.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Ciprian1999/CIPRI-Components/issues"
+        "url": "https://github.com/Ciprian1999/LICENTA/issues"
     },
-    "homepage": "https://github.com/Ciprian1999/CIPRI-Components#readme",
+    "homepage": "https://github.com/Ciprian1999/LICENTA#readme",
     "devDependencies": {
         "env-cmd": "^10.1.0",
         "nodemon": "^2.0.12"
