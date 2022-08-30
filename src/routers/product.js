@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
-const Product = require('../models/product');
+const Product = require('../models/Product');
 const manufacturers = require('../utils/constants/manufacturers');
 const types = require('../utils/constants/types');
 require('mongoose');
