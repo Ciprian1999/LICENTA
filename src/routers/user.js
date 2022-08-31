@@ -19,7 +19,7 @@ router.post('/users/create', async (req, res) => {
     } catch (e) {
         res.render('error', {
             error_code: 400,
-            error_message: 'Registrare invalida'
+            error_message: e.message
         });
     }
 });
