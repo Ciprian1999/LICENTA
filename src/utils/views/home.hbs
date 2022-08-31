@@ -39,9 +39,11 @@
                     <img src="/images/cart.png" width="30px" height="30px"><span id="cartIcon" style="color:red"></span>
                 </a>
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                {{#if isLogged}}
                 <a href="/users/logout">
-                    <img class="logout" style="display:none" src="images/logout.png" width="30px" height="30px">
+                    <img class="logout" src="images/logout.png" width="30px" height="30px">
                 </a>
+                {{/if}}
                 {{#if isLogged}}
                 <a href="/account">
                     <img class="logout" src="/images/my-account.png" width="40px" height="40px">
